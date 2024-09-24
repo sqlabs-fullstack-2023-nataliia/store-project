@@ -1,0 +1,101 @@
+version: '3.8'
+
+services:
+  catalog.api:
+    container_name: lde.catalog.api
+    build:
+      context: .
+      dockerfile: Catalog.Host/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5288
+      - ConnectionString=server=host.docker.internal;port=5432;database=store;uid=postgres;password=admin123;
+      - Authorization__Authority=http://localhost:7001
+      - PathBase=http://localhost:5288
+    depends_on:
+      - postgres
+    ports:
+      - 5288:5288
+  
+  basket.api:
+    container_name: lde.basket.api
+    build:
+      context: .
+      dockerfile: Basket.Host/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5286
+      - Authorization__Authority=http://localhost:7001
+      - Redis__Host=http://localhost:6379
+      - Redis__CacheTimeout=00:00:10
+      - PathBase=http://localhost:5286
+    depends_on:
+      - redis
+    ports:
+      - 5286:5286
+  
+  order.api:
+    container_name: lde.order.api
+    build:
+      context: .
+      dockerfile: Order.Host/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5230
+      - ConnectionString=server=host.docker.internal;port=5432;database=order;uid=postgres;password=admin123;
+      - Authorization__Authority=http://localhost:7001
+      - PathBase=http://localhost:5230
+    depends_on:
+      - postgres
+    ports:
+      - 5230:5230
+        
+  identityserver:
+    container_name: lde.identityserver
+    build:
+      context: .
+      dockerfile: IdentityServer/IdentityServer/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:7001
+      - CatalogApi=http://localhost:5288
+      - BasketApi=http://localhost:5286
+      - OrderApi=http://localhost:5230
+    ports:
+      - 7001:7001
+  
+  postgres:
+    image: postgres
+    container_name: lde.postgres
+    environment:
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: store
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    
+  redis:
+    image: redis
+    container_name: lde.redis
+    ports:
+        - 6379:6379
+  nginx:
+    image: nginx
+    container_name: lde.nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./Proxy/gateway/nginx/conf.d:/etc/nginx/conf.d
+      - ./Proxy/assets:/var/www/assets
+
+networks:
+  default:
+    driver: bridge
+    internal: false
+    attachable: true
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.0.4/24
+          gateway: 192.168.0.4

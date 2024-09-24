@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.8"
+services:
+  identityserver:
+    build:
+      context: "/Users/nataliastasiukova/Documents/NetC#Projects/store/Store"
+      dockerfile: "IdentityServer/IdentityServer/Dockerfile"
+      target: "build"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net6/IdentityServer.dll"
+    environment:
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net6/IdentityServer.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "identityserver:dev"
+    ports: []
+    volumes:
+    - "/Users/nataliastasiukova/.nuget/packages:/root/.nuget/packages"
+    - "/Users/nataliastasiukova/Documents/NetC#Projects/store/Store/IdentityServer/IdentityServer:/app:rw"
+    - "/Users/nataliastasiukova/Documents/NetC#Projects/store/Store:/src:rw"
+    working_dir: "/app"

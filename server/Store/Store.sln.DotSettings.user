@@ -1,0 +1,33 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATokenResponse_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fe37d1230f9857016ebfadc46bf9015309f301987_003FTokenResponse_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/AnalysisEnabled/@EntryValue">SOLUTION</s:String>
+	<s:String x:Key="/Default/Environment/Hierarchy/Build/SolBuilderDuo/UseMsbuildSolutionBuilder/@EntryValue">No</s:String>
+	
+	
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f9757d6c_002D1679_002D4287_002Db773_002D85313d76e601/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AddAsync_Success" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::0DE04C53-6636-4E5D-94AD-C2D12BCF0F6F::net8.0::Catalog.Host.Test.Services.BrandServiceTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::0DE04C53-6636-4E5D-94AD-C2D12BCF0F6F::net8.0::Catalog.Host.Test.Services.TypeServiceTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::0DE04C53-6636-4E5D-94AD-C2D12BCF0F6F::net8.0::Catalog.Host.Test.Services.CategoryServiceTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::0DE04C53-6636-4E5D-94AD-C2D12BCF0F6F::net8.0::Catalog.Host.Test.Services.ItemServiceTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::0DE04C53-6636-4E5D-94AD-C2D12BCF0F6F::net8.0::Catalog.Host.Test.Services.CatalogItemServiceTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::0DE04C53-6636-4E5D-94AD-C2D12BCF0F6F::net8.0::Catalog.Host.Test.Services.BffCatalogServiceTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::1ADCA570-FCDA-4B85-BF63-3B32E8E5D33E::net8.0::Order.Host.Test.Services.CatalogOrderServiceTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::1ADCA570-FCDA-4B85-BF63-3B32E8E5D33E::net8.0::Order.Host.Test.Services.OrderItemServiceTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::1ADCA570-FCDA-4B85-BF63-3B32E8E5D33E::net8.0::Order.Host.Test.Services.OrderBffServiceTest.CreateOrderAsyncTest_Success&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::1ADCA570-FCDA-4B85-BF63-3B32E8E5D33E::net8.0::Order.Host.Test.Services.OrderBffServiceTest.CreateOrderAsyncTest_Failed&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::1ADCA570-FCDA-4B85-BF63-3B32E8E5D33E::net8.0::Order.Host.Test.Services.OrderBffServiceTest.GetOrdersByUserIdAsyncTest_Success&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::1ADCA570-FCDA-4B85-BF63-3B32E8E5D33E::net8.0::Order.Host.Test.Services.OrderBffServiceTest.GetOrdersByUserIdAsyncTest_Failed&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::1ADCA570-FCDA-4B85-BF63-3B32E8E5D33E::net8.0::Order.Host.Test.Services.OrderBffServiceTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::65C6CC1E-0577-483E-8A68-DB466D3A87DF::net8.0::Basket.Host.Test.Services.CacheServiceTest.AddOrUpdateAsync_Failed&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::65C6CC1E-0577-483E-8A68-DB466D3A87DF::net8.0::Basket.Host.Test.Services.CacheServiceTest.AddOrUpdateAsync_Success&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::65C6CC1E-0577-483E-8A68-DB466D3A87DF::net8.0::Basket.Host.Test.Services.CacheServiceTest.AddOrUpdateAsync_KeyExists_IncrementValue&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::65C6CC1E-0577-483E-8A68-DB466D3A87DF::net8.0::Basket.Host.Test.Services.CacheServiceTest.AddOrUpdateAsync_KeyDoesNotExist_SetNewValue&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::65C6CC1E-0577-483E-8A68-DB466D3A87DF::net8.0::Basket.Host.Test.Services.CacheServiceTest.RemoveOrUpdateAsync_ValueMatches_DeleteKey&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::65C6CC1E-0577-483E-8A68-DB466D3A87DF::net8.0::Basket.Host.Test.Services.CacheServiceTest.RemoveOrUpdateAsync_ValueDoesNotMatch_DecreaseValue&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::65C6CC1E-0577-483E-8A68-DB466D3A87DF::net8.0::Basket.Host.Test.Services.CacheServiceTest.GetAsync_ReturnsHashEntries&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::65C6CC1E-0577-483E-8A68-DB466D3A87DF::net8.0::Basket.Host.Test.Services.CacheServiceTest.RemoveAllAsync_RemovesAllKeys&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::65C6CC1E-0577-483E-8A68-DB466D3A87DF::net8.0::Basket.Host.Test.Services.CacheServiceTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
